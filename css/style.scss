@@ -156,6 +156,7 @@ body{
     font-weight: 300;
     z-index: 10;
     letter-spacing: 0.2em;
+    text-transform: capitalize;
   }
   span{
     position: absolute;
@@ -164,7 +165,16 @@ body{
     color: var(--color-black_light);
     z-index: 9;
     letter-spacing: 0.2em;
+    text-transform: uppercase;
   }
+}
+
+.container-line{
+  width: 60rem;
+  height: 2rem;
+  background: var(--color-primary);
+  margin-top: 28rem;
+  margin-bottom: 60rem;
 }
 
 .owl-carousel{
@@ -327,6 +337,7 @@ main{
   width: 100%;
   padding: 105rem 64rem 90rem;
   background: var(--color-dark_gray);
+  border-radius: var(--border-radius_div);
   .subtitle{
     margin-top: 61rem;
     font-size: var(--text-size_body);
@@ -335,5 +346,53 @@ main{
   }
   .container-slider{
     margin-top: 90rem;
+  }
+}
+
+.container-work{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 90rem;
+  width: 100%;
+  .container-work-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15rem;
+    align-items: center;
+    width: inherit;
+    .container-work-info--item{
+      width: 255rem;
+      background: var(--color-dark_gray);
+      border-radius: var(--border-radius_div);
+      height: 206rem;
+      padding: 24rem;
+      .title{
+        font-size: var(--text-size_h5);
+        line-height: 1.4;
+        color: var(--color-secondary);
+        letter-spacing: -0.275px;
+        text-transform: capitalize;
+        font-weight: 400;
+      }
+      .container-line-inner{
+        width: 56rem;
+        height: 2rem;
+        background: var(--color-primary);
+        margin: 10rem 0 24rem;
+      }
+      .text-content{
+        font-size: var(--text-size_caption);
+        color: var(--color-secondary_50);
+        line-height: 1.5;
+        letter-spacing: -0.1625px;
+        font-weight: 300;
+      }
+      &:hover{
+        cursor: pointer;
+        background: var(--color-primary);
+      }
+    }
   }
 }
