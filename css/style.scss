@@ -44,6 +44,9 @@
   --color-dark_gray: #252525;
   --color-light_gray: #737373;
 
+  --star-active: #fece3c;
+  --star-inactive: #6c6962;
+
   --text-size_h1: 72rem;
   --text-size_h2: 60rem;
   --text-size_h3: 40rem;
@@ -392,6 +395,200 @@ main{
       &:hover{
         cursor: pointer;
         background: var(--color-primary);
+        .title{
+          color: var(--color-dark_gray);
+        }
+        .container-line-inner{
+          background: var(--color-dark_gray);
+        }
+        .text-content{
+          color: var(--color-dark_gray);
+        }
+      }
+    }
+  }
+}
+
+.container-dishes{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120rem;
+  width: 100%;
+  .container-dishes-info{
+    width: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15rem 15rem;
+    .dishes-item{
+      width: 350rem;
+      height: 493rem;
+      border-radius: var(--border-radius_div);
+      background: var(--color-dark_gray);
+      .thumbnail{
+        width: 100%;
+        height: 260rem;
+        position: relative;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+        .shared{
+          position: absolute;
+          background: var(--color-secondary_50);
+          border-radius: 50%;
+          width: 40rem;
+          height: 40rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          top: 24rem;
+          right: 24rem;
+          svg{
+            width: 24rem;
+            height: 24rem;
+          }
+          &:hover{
+            cursor: pointer;
+          }
+        }
+      }
+      .item-content{
+        width: 100%;
+        padding: 24rem 30rem;
+        h5{
+          font-size: var(--text-size_h4);
+          color: var(--color-secondary);
+          font-weight: 300;
+          line-height: 1;
+        }
+        .subtitle{
+          font-size: var(--text-size_caption);
+          color: var(--color-secondary_50);
+          font-weight: 300;
+        }
+        .text{
+          margin: 20rem 0;
+          font-size: var(--text-size_caption);
+          line-height: 1.3;
+          letter-spacing: -0.1625px;
+          font-weight: 300;
+          color: var(--color-secondary_50);
+        }
+        footer{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .star-container{
+            .c-icon {
+              fill: var(--star-inactive);
+            }
+            svg{
+              width: 20rem;
+              height: 20rem;
+            }
+          }
+          .number-ratings{
+            font-size: var(--text-size_caption);
+            font-weight: 500;
+            color: var(--color-secondary);
+          }
+          .link-button{
+            border: 2rem solid var(--color-light_gray);
+            font-size: var(--text-size_tiny);
+            color: var(--color-secondary_50);
+          }
+        }
+      }
+      &:hover{
+        .item-content{
+          cursor: pointer;
+          footer{
+            .star-container{
+              .c-icon {
+                fill: var(--star-active);
+                &:last-child{
+                  fill: var(--star-inactive);
+                }
+              }
+            }
+            .link-button{
+              border: 2px solid var(--color-primary);
+              background: var(--color-primary);
+              color: var(--color-black);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.container-chefs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 120rem;
+
+  .chefs-list{
+    display: flex;
+    justify-content: space-between;
+    width: inherit;
+    figure{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 24rem;
+      img{
+        width: 65rem;
+        height: 65rem;
+      }
+      figcaption{
+        h5{
+          font-size: var(--text-size_body);
+          color: var(--color-secondary);
+          font-weight: 300;
+          line-height: 1.4;
+          letter-spacing: -0.225px;
+          margin-bottom: 6rem;
+        }
+        p{
+          color: var(--color-secondary_50);
+          font-weight: 300;
+          font-size: var(--text-size_tiny);
+          letter-spacing: -0.15px;
+          line-height: 1.4;
+        }
+      }
+    }
+    .chefs-photo-list{
+      display: flex;
+      gap: 15rem;
+      margin-top: 24rem;
+      .chefs-photo{
+        border-radius: var(--border-radius_div);
+        img{
+          height: 65rem;
+        }
+        &:first-child{
+          img{
+            width: 160rem;
+          }
+        }
+        &:nth-child(2){
+          img{
+            width: 65rem;
+          }
+        }
+        &:last-child{
+          img{
+            width: 65rem;
+          }
+        }
+
       }
     }
   }
