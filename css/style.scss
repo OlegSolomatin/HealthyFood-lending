@@ -146,6 +146,9 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width:767.7px){
+    padding: 0 30rem;
+  }
 }
 
 .link-button{
@@ -173,6 +176,9 @@ body{
   position: relative;
   display: flex;
   justify-content: center;
+  @media screen and (max-width:767.7px){
+    align-items: center;
+  }
   h4{
     position: relative;
     text-align: center;
@@ -183,6 +189,10 @@ body{
     z-index: 10;
     letter-spacing: 0.25em;
     text-transform: capitalize;
+    @media screen and (max-width:767.7px){
+      font-size: var(--text-size_h6);
+      line-height: 1.5;
+    }
   }
   span{
     position: absolute;
@@ -192,6 +202,10 @@ body{
     z-index: 9;
     letter-spacing: 0.15em;
     text-transform: uppercase;
+    @media screen and (max-width:767.7px){
+      font-size: var(--text-size_h2);
+      line-height: 1.5;
+    }
   }
 }
 
@@ -240,6 +254,14 @@ header{
   border-bottom: 1px solid var(--color-light_gray);
   padding: 32rem 0;
   mix-blend-mode: normal;
+  .container-layout{
+    @media screen and (max-width:767.7px){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10rem;
+    }
+  }
   .container-logo{
     a{
       display: flex;
@@ -295,6 +317,9 @@ main{
   display: flex;
   align-items: center;
   flex-direction: column;
+  @media screen and (max-width:767.7px){
+    margin: 50rem 0;
+  }
   h1{
     font-weight: 300;
     font-size: var(--text-size_h1);
@@ -304,6 +329,9 @@ main{
     text-transform: capitalize;
     span{
       font-weight: 500;
+    }
+    @media screen and (max-width:767.7px){
+      font-size: var(--text-size_h5);
     }
   }
   .headline{
@@ -329,6 +357,9 @@ main{
     gap: 50rem;
     justify-content: space-around;
     align-items: center;
+    @media screen and (max-width:767.7px){
+      display: none;
+    }
 
     .container-work-info__info{
       display: flex;
@@ -374,6 +405,9 @@ main{
   }
   .container-slider{
     margin-top: 90rem;
+    @media screen and (max-width:767.7px){
+      display: none;
+    }
   }
 }
 
@@ -390,12 +424,18 @@ main{
     gap: 15rem;
     align-items: center;
     width: inherit;
+    @media screen and (max-width:767.7px){
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15rem;
+    }
     .container-work-info--item{
       width: 255rem;
       background: var(--color-dark_gray);
       border-radius: var(--border-radius_div);
       height: 206rem;
       padding: 24rem;
+      transition: all 1000ms;
       .title{
         font-size: var(--text-size_h5);
         line-height: 1.4;
@@ -418,6 +458,7 @@ main{
         font-weight: 300;
       }
       &:hover{
+        transition: all 0ms;
         cursor: pointer;
         background: var(--color-primary);
         .title{
@@ -561,6 +602,10 @@ main{
     display: flex;
     justify-content: space-between;
     width: inherit;
+    @media screen and (max-width:767.7px){
+      flex-direction: column;
+      gap: 30rem;
+    }
     figure{
       display: flex;
       flex-direction: row;
@@ -635,8 +680,10 @@ main{
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 15rem;
-    height: 510rem;
-
+    height: auto;
+    @media screen and (max-width:767.7px){
+      flex-wrap: nowrap;
+    }
     .list-item{
       width: calc(50% - 15rem);
       height: 150rem;
@@ -647,6 +694,14 @@ main{
       gap: 7.5rem;
       padding: 30rem 30rem 25rem;
       transition: all 1000ms;
+
+      @media screen and (max-width:767.7px){
+        width: 100%;
+        height: auto;
+        .teg{
+          order: -1;
+        }
+      }
 
       .description{
         width: 100%;
@@ -799,12 +854,19 @@ main{
     gap: 15rem;
     justify-content: space-between;
     width: inherit;
+    @media screen and (max-width:767.7px){
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
 
     .list-item{
       width: calc(33.3% - 7.5rem);
       height: 330rem;
       background: var(--color-dark_gray);
       border-radius: var(--border-radius_div);
+      @media screen and (max-width:767.7px){
+        width: 100%;
+      }
       header{
         padding: 25rem;
         display: flex;
@@ -946,6 +1008,11 @@ footer{
     align-items: center;
     background: var(--color-dark_gray);
     padding: 30rem 165rem;
+    @media screen and (max-width:767.7px){
+      flex-direction: column;
+      flex-wrap: nowrap;
+      padding: 15rem;
+    }
 
     .container-work-info__info{
       width: 33%;
@@ -953,6 +1020,9 @@ footer{
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      @media screen and (max-width:767.7px){
+        width: 100%;
+      }
       .container-logo__svg{
         width: 26rem;
         height: 26rem;
