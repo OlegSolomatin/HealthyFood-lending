@@ -487,6 +487,9 @@ main{
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 15rem 15rem;
+    @media screen and (max-width:767.7px){
+      justify-content: center;
+    }
     .dishes-item{
       width: 350rem;
       height: 493rem;
@@ -605,6 +608,7 @@ main{
     @media screen and (max-width:767.7px){
       flex-direction: column;
       gap: 30rem;
+      justify-content: center;
     }
     figure{
       display: flex;
@@ -612,11 +616,18 @@ main{
       flex-wrap: wrap;
       align-items: center;
       gap: 24rem;
+      @media screen and (max-width:767.7px){
+        flex-direction: column;
+        justify-content: center;
+      }
       img{
         width: 65rem;
         height: 65rem;
       }
       figcaption{
+        @media screen and (max-width:767.7px){
+          text-align: center;
+        }
         h5{
           font-size: var(--text-size_body);
           color: var(--color-secondary);
@@ -638,6 +649,9 @@ main{
       display: flex;
       gap: 15rem;
       margin-top: 24rem;
+      @media screen and (max-width:767.7px){
+        justify-content: center;
+      }
       .chefs-photo{
         border-radius: var(--border-radius_div);
         img{
@@ -680,9 +694,10 @@ main{
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 15rem;
-    height: auto;
+    height: 510rem;
     @media screen and (max-width:767.7px){
       flex-wrap: nowrap;
+      height: auto;
     }
     .list-item{
       width: calc(50% - 15rem);
@@ -793,6 +808,7 @@ main{
       background-size: cover;
       padding: 60rem;
       background: url("../assets/placeholder (9).png") no-repeat;
+      background-size: cover;
       position: relative;
       .description{
         order: 1;
@@ -857,6 +873,7 @@ main{
     @media screen and (max-width:767.7px){
       flex-direction: column;
       flex-wrap: nowrap;
+      gap: 30rem;
     }
 
     .list-item{
@@ -995,7 +1012,6 @@ main{
 
 footer{
   background: var(--color-dark_gray);
-  /*width: 100vw;*/
   display: flex;
   flex-direction: column;
   align-items: center;

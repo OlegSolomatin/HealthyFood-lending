@@ -484,6 +484,11 @@ main .container-layout {
   justify-content: space-between;
   gap: 15rem 15rem;
 }
+@media screen and (max-width: 767.7px) {
+  .container-dishes .container-dishes-info {
+    justify-content: center;
+  }
+}
 .container-dishes .container-dishes-info .dishes-item {
   width: 350rem;
   height: 493rem;
@@ -594,6 +599,7 @@ main .container-layout {
   .container-chefs .chefs-list {
     flex-direction: column;
     gap: 30rem;
+    justify-content: center;
   }
 }
 .container-chefs .chefs-list figure {
@@ -603,9 +609,20 @@ main .container-layout {
   align-items: center;
   gap: 24rem;
 }
+@media screen and (max-width: 767.7px) {
+  .container-chefs .chefs-list figure {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .container-chefs .chefs-list figure img {
   width: 65rem;
   height: 65rem;
+}
+@media screen and (max-width: 767.7px) {
+  .container-chefs .chefs-list figure figcaption {
+    text-align: center;
+  }
 }
 .container-chefs .chefs-list figure figcaption h5 {
   font-size: var(--text-size_body);
@@ -626,6 +643,11 @@ main .container-layout {
   display: flex;
   gap: 15rem;
   margin-top: 24rem;
+}
+@media screen and (max-width: 767.7px) {
+  .container-chefs .chefs-list .chefs-photo-list {
+    justify-content: center;
+  }
 }
 .container-chefs .chefs-list .chefs-photo-list .chefs-photo {
   border-radius: var(--border-radius_div);
@@ -659,11 +681,12 @@ main .container-layout {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 15rem;
-  height: auto;
+  height: 510rem;
 }
 @media screen and (max-width: 767.7px) {
   .container-recipes .recipes-list {
     flex-wrap: nowrap;
+    height: auto;
   }
 }
 .container-recipes .recipes-list .list-item {
@@ -768,6 +791,7 @@ main .container-layout {
   background-size: cover;
   padding: 60rem;
   background: url("../assets/placeholder (9).png") no-repeat;
+  background-size: cover;
   position: relative;
 }
 .container-recipes .recipes-list .list-item--big .description {
@@ -832,6 +856,7 @@ main .container-layout {
   .container-social .social-list {
     flex-direction: column;
     flex-wrap: nowrap;
+    gap: 30rem;
   }
 }
 .container-social .social-list .list-item {
@@ -970,7 +995,6 @@ main .container-layout {
 
 footer {
   background: var(--color-dark_gray);
-  /*width: 100vw;*/
   display: flex;
   flex-direction: column;
   align-items: center;
