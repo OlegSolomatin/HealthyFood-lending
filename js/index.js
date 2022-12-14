@@ -15,6 +15,6 @@ $(document).ready(function(){
         autoWidth: true,
         lazyLoad:true,
         dots: false,
-        navText: ["<img src='../assets/left.png'>","<img src='../assets/right.png'>"],
+        navText: ["<img src='/assets/left.png'>","<img src='/assets/right.png'>"],
     });
 });
