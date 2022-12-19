@@ -977,7 +977,7 @@ main .container-layout {
   background: var(--color-primary);
   z-index: 10;
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: center;
 }
 .container-social .social-list .list-item main .gallery-social a:hover:before:hover {
